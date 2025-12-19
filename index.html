@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCampusMart - The Student Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-banner">
+            <p>🎓 Back to School Campaign: Sell your old books with 0% fees!</p>
+        </div>
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SmartCampusMart</span>
+            </a>
+
+            <div class="search-bar-wrapper">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search textbooks, electronics..." id="global-search">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="nav-icons">
+                <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+                <a href="sell.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Sell</a>
+                <a href="login.html" class="icon-btn"><i class="far fa-user"></i></a>
+                <a href="cart.html" class="icon-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count">0</span>
+                </a>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        
+        <div class="nav-links mobile-only">
+            <a href="index.html">Home</a>
+            <a href="products.html">Browse Shop</a>
+            <a href="sell.html">Sell Item</a>
+            <a href="dashboard.html">My Dashboard</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; margin-bottom: 20px; font-weight: 800;">Turn Your Old Stuff Into Cash</h1>
+                <p class="text-muted" style="font-size: 1.2rem; margin-bottom: 30px;">The safest way to trade with students on your campus.</p>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <a href="products.html" class="btn btn-primary">Browse Items</a>
+                    <a href="sell.html" class="btn btn-outline">Start Selling</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <h2 class="text-center mb-4">Popular Categories</h2>
+            <div class="category-grid">
+                <a href="products.html?cat=Books" class="category-card">
+                    <i class="fas fa-book-open"></i>
+                    <span>Textbooks</span>
+                </a>
+                <a href="products.html?cat=Electronics" class="category-card">
+                    <i class="fas fa-laptop"></i>
+                    <span>Electronics</span>
+                </a>
+                <a href="products.html?cat=Furniture" class="category-card">
+                    <i class="fas fa-couch"></i>
+                    <span>Dorm Furniture</span>
+                </a>
+                <a href="products.html?cat=Clothing" class="category-card">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Clothing</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section-padding container" style="background: var(--bg-body);">
+            <div class="flex-between mb-4">
+                <h2>Fresh Listings</h2>
+                <a href="products.html" class="btn btn-outline btn-sm">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="product-grid" id="featured-products-grid">
+                <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="padding: 40px 0; border-top: 1px solid var(--border-color); margin-top: 60px;">
+        <div class="container text-center">
+            <p class="text-muted">&copy; 2025 SmartCampusMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

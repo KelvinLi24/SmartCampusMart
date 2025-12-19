@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Item - SmartCampusMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> <span>SmartCampusMart</span></a>
+            <a href="dashboard.html" class="btn btn-outline btn-sm">Cancel</a>
+        </nav>
+    </header>
+
+    <main class="container section-padding">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="form-card" style="background: var(--bg-card); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                <div class="text-center mb-4">
+                    <h2>Post a New Ad</h2>
+                    <p class="text-muted">Fill in the details to sell your item quickly.</p>
+                </div>
+
+                <form id="sell-form" novalidate>
+                    <div class="form-group">
+                        <label>Item Title</label>
+                        <input type="text" id="title" placeholder="e.g. Calculus 8th Edition (AI will auto-detect category)" required>
+                    </div>
+
+                    <div class="checkout-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="category-select" required>
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="auto">✨ AI Auto-Detect</option>
+                                <option value="Books">Textbooks</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Daily Supplies">Daily Supplies</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Condition</label>
+                            <select id="condition-select">
+                                <option value="good">Good</option>
+                                <option value="like-new">Like New</option>
+                                <option value="new">Brand New</option>
+                                <option value="fair">Fair</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price (HKD)</label>
+                        <input type="number" id="price" placeholder="0.00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="description" rows="5" placeholder="Describe defects, reason for selling..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Meetup Location</label>
+                        <select id="location" required>
+                            <option value="PolyU Library">PolyU Library</option>
+                            <option value="Student Canteen">Student Canteen</option>
+                            <option value="Hung Hom Station">Hung Hom Station</option>
+                            <option value="Core A">Core A</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group file-upload-box">
+                        <label>Upload Photo</label>
+                        <input type="file" id="image" accept="image/*" style="border: 2px dashed var(--border-color); padding: 20px; text-align: center;">
+                        </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-block btn-lg mt-4">Post Listing Now</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

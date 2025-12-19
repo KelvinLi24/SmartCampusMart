@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - SmartCampusMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> <span>SmartCampusMart</span></a>
+            <button id="logout-btn" class="btn btn-outline btn-sm">Logout</button>
+        </nav>
+    </header>
+
+    <main class="container section-padding">
+        <div class="dashboard-grid">
+            <aside class="dash-sidebar">
+                <div class="user-profile-summary text-center mb-4">
+                    <div class="avatar-circle" style="width:60px; height:60px; background:var(--primary-color); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-size:1.5rem;">JD</div>
+                    <h3>John Doe</h3>
+                    <p class="text-muted">Student ID: 21xxxxxx</p>
+                </div>
+                <ul class="dash-nav">
+                    <li><a id="tab-listings" class="active" onclick="dashboardManager.switchTab('listings')"><i class="fas fa-box-open"></i> My Listings</a></li>
+                    <li><a id="tab-orders" onclick="dashboardManager.switchTab('orders')"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+                    <li><a id="tab-settings" onclick="dashboardManager.switchTab('settings')"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </aside>
+
+            <section class="dash-content">
+                <div class="flex-between mb-4">
+                    <h2 id="dash-title">My Active Listings</h2>
+                    <a href="sell.html" class="btn btn-primary btn-sm" id="post-new-btn"><i class="fas fa-plus"></i> Post New Item</a>
+                </div>
+
+                <div id="dashboard-view-area">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

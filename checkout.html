@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SmartCampusMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> <span>SmartCampusMart</span></a>
+            <span>Secure Checkout</span>
+        </nav>
+    </header>
+
+    <main class="container section-padding">
+        <div class="checkout-grid">
+            <div class="checkout-form-col">
+                <div class="form-card" style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                    <h3 class="mb-4"><i class="fas fa-user-graduate"></i> Student Info</h3>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullname" required placeholder="As shown on Student ID">
+                        </div>
+                        <div class="form-group">
+                            <label>Student ID</label>
+                            <input type="text" required placeholder="21xxxxxx">
+                        </div>
+
+                        <h3 class="mt-4 mb-4"><i class="fas fa-truck"></i> Delivery Method</h3>
+                        <div class="radio-group">
+                            <label class="radio-card selected">
+                                <input type="radio" name="delivery" value="0" checked>
+                                <div class="radio-info">
+                                    <span class="radio-title">Campus Meetup</span>
+                                    <span class="radio-desc">Face to face at Library/Canteen</span>
+                                </div>
+                                <span class="radio-price">Free</span>
+                            </label>
+                            
+                            <label class="radio-card">
+                                <input type="radio" name="delivery" value="30">
+                                <div class="radio-info">
+                                    <span class="radio-title">SF Express</span>
+                                    <span class="radio-desc">Pay online, delivered to dorm/home</span>
+                                </div>
+                                <span class="radio-price">+$30.00</span>
+                            </label>
+                        </div>
+
+                        <h3 class="mt-4 mb-4"><i class="far fa-credit-card"></i> Payment</h3>
+                        <div class="form-group">
+                            <select class="form-select" required>
+                                <option value="cod">Cash on Meetup (Recommended)</option>
+                                <option value="payme">PayMe / FPS</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">
+                            Confirm Order ($<span id="btn-total">0.00</span>)
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="checkout-summary-col">
+                <div class="cart-summary-card">
+                    <h3>Order Items</h3>
+                    <div id="checkout-items-list" class="mini-cart-list">
+                        </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total to Pay</span>
+                        <span id="final-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

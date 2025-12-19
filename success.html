@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg-body);">
+
+    <div class="success-card">
+        <div class="checkmark-circle">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+
+        <h1 style="color: var(--primary-color);">Payment Successful!</h1>
+        <p class="text-muted" style="margin-bottom: 20px;">Thank you for your purchase.</p>
+        
+        <div style="background: var(--bg-body); padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+            <p>Order Number: <strong id="order-id" style="font-size: 1.2rem;">Loading...</strong></p>
+        </div>
+        
+        <div class="auth-footer">
+            <a href="dashboard.html?tab=orders" class="btn btn-primary btn-block">View My Orders</a>
+            <a href="index.html" class="btn btn-outline btn-block mt-2">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

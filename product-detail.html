@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details - SmartCampusMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> <span>SmartCampusMart</span></a>
+            <div class="nav-icons">
+                <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container section-padding">
+        <div class="mb-4 text-muted" style="font-size: 0.9rem;">
+            <a href="index.html">Home</a> / <a href="products.html">Browse</a> / <span id="breadcrumb-title">Item Name</span>
+        </div>
+
+        <div class="product-detail-layout">
+            <div class="detail-gallery">
+                <div class="product-img-wrapper" style="height: 400px; border-radius: var(--radius-lg);">
+                    <img id="detail-img" src="" alt="Product Image" style="object-fit: cover; height: 100%; width: 100%;">
+                </div>
+            </div>
+
+            <div class="detail-info">
+                <h1 id="detail-title" style="font-size: 2rem; margin-bottom: 10px;">Loading...</h1>
+                
+                <div class="flex-between mb-4">
+                    <span class="product-price" id="detail-price" style="font-size: 1.5rem;">$0.00</span>
+                    <span class="badge" id="detail-condition" style="background: #e2e8f0; color: #333; padding: 5px 10px; border-radius: 4px; position: static;">Condition</span>
+                </div>
+
+                <div class="seller-card">
+                    <div style="display: flex; align-items: center;">
+                        <div class="seller-avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Sold by</span>
+                            <h4 id="detail-seller" style="margin: 0;">Seller Name</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Chat</button>
+                </div>
+
+                <div class="mb-4">
+                    <h3>Description</h3>
+                    <p id="detail-desc" class="text-muted">No description provided.</p>
+                </div>
+
+                <div class="mb-4">
+                    <h3><i class="fas fa-map-marker-alt"></i> Meetup Location</h3>
+                    <p id="detail-location-text" class="text-muted">PolyU Library</p>
+                </div>
+
+                <button class="btn btn-primary btn-block btn-lg" id="add-to-cart-btn">Add to Cart</button>
+                
+                <div class="mt-4 p-3" style="background: #fff3cd; border-radius: 8px; font-size: 0.9rem; color: #856404;">
+                    <i class="fas fa-shield-alt"></i> <strong>Safety Tip:</strong> Always meet in public places like the Library or Canteen.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom"><p>&copy; 2025 SmartCampusMart.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SmartCampusMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg-body);">
+
+    <div style="width: 100%; max-width: 450px; padding: 20px;">
+        <div class="auth-card" style="background: var(--bg-card); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+            <div class="text-center mb-4">
+                <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 20px;"><i class="fas fa-graduation-cap"></i> SmartCampusMart</a>
+                <h2>Create Account</h2>
+                <p class="text-muted">Start trading on campus today</p>
+            </div>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Student ID</label>
+                    <input type="text" id="reg-username" placeholder="e.g. 2109xxxx" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" placeholder="Min. 8 chars" required>
+                    <small class="text-muted" style="font-size: 0.8rem; display: block; margin-top: 5px;">Must contain 1 uppercase letter & 1 number.</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="reg-confirm-password" placeholder="Re-enter password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p>Already have an account? <a href="login.html" style="color: var(--primary-color); font-weight: 600;">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
